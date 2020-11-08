@@ -1,0 +1,80 @@
+Proyecto
+
+
+Inicio
+
+EL inicio sera la pagina proporcionando unas cards con opciones de juegos dependiendo cual elija lo llevara a ese juego
+
+
+Modos de juego
+
+El Quiz el principal modo que tratara sobre el himno se basara en un sistema de niveles en donde las preguntas iran en orden
+y entre mas avanze mas difcil será llevando así un mejor manejo de aprendizaje
+
+Encontrar los departamentos 
+
+este juego se basara mas que nada en arrastrar nombres de los dichos departamentos de honduras y ponerlos en su lugar correcto enfocado mas en niños
+de primaria y en su fase final  se podrá encontrar tambien los municipios
+
+Cantar el himno
+
+Este modo se hará en base a la tecnologia de reconocimiento de voz de javascript este estara divido en 3 modos uno donde se podra cantar todo el himno 
+uno en donde puede cantar solo una estrofa o coro del himno y el ultimo será en donde puede elegir si cantar una estrofa o coro de manera aleatorio  
+
+Desafio Culturarl
+
+este modo está enfocado mas que nada en pura diversion en donde habrán preguntas culturales sobre honduras
+
+
+Modo Online 
+
+EL modo mas complejo tratara de desafiar a cualquier persona para jugar en linea y retarse y el que responda mas gana
+
+
+actulizaciones complejas
+
+esto se llevara cuando la app esta finalizada y se creara un sistema de registro y perfiles en donde la gente puede guardar su progreso
+y ver a las demas personas su puntacion eh tiempo j
+
+
+Free Fire Champions League
+
+Preparate Este 21 de agosto
+
+A las 5:00 Pm 
+
+Se llevara a cabo el primer torneo.
+
+
+
+
+Free Fire Champions League. Hola buenas querida comunidad
+de free fire en este presente quiero dar a conocer
+un proyecto sobre una comunidad enfocada en la
+creacion de torneos competitivos entre diferente
+clanes. Asi que por este medio damos el anuncio
+de que buscamos 4 clanes de preferencia buenas
+estadisticas para participar en nuestro torneo
+el dia Viernes 18 de Septiembre ,Para poder participar deberan
+dirigirse a nuestro sitio web """ donde podran
+ver la informacion de como participar entre muchas
+cosas mas.
+
+
+The Eye of Truth
+Her EEERY
+BRASIL JOu
+MIDNIGHT
+bagel house
+
+
+
+
+
+
+
+
+discord oswaldo23456#0410 
+
+
+Amor a mi patria,hermosa

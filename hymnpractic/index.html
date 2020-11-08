@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  
+  <title>HymnPractic Honduras</title>
+ 
+  <link href="css/estilos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo&family=Fira+Sans&family=Montserrat&family=Oswald&family=Roboto:wght@100&family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="header" id="header">
+	
+		<nav class="menu">
+			<div class="abandonar">
+				<button type="button" class="leave" onclick="leavequiz ()"><i class="fas fa-arrow-left"></i></button>
+			</div>
+			<div class="icon-menu" onclick="rotate()" style="display:none;">
+				<span><i class="fas fa-caret-down"></i></span>
+			</div>
+			
+			
+			
+			<div class="logotipo" href="#"><h2>HymnPractic<h2></div>
+			<div class="enlaces">
+				<a href="#">Quiz Subidos</a>
+				<a href="#">Añadir</a>
+				<a href="#">Amigos</a>
+				<button  id="visibility" style="display:none" onclick="pageHome()"><i class="fas fa-sign-out-alt"></i></button>
+				<button class="switch" onclick="darkMode()">
+					<span><i></i></span>
+					<span><i></i></span>
+				</button>
+			</div>
+		</nav>
+			
+			
+		
+	</header>
+	
+	
+
+<div class="main main-min" id="mainMin">
+
+	<div class="heading">
+      <h2>Selecciona Un Minijuego</h2>
+    </div>
+    <div class="row">
+      <div class="card">
+        <div class="card-header">
+          <h2>Cuestionario del Himno</h2>
+        </div>
+        <div class="card-body">
+          <p>
+            Responde el Cuestionario del himno
+          </p>
+			<a class="btn-play-game" id="btn-play-game" >Jugar!</a>	
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Test De Ortografía</h2>
+        </div>
+        <div class="card-body">
+          <p>
+            En desarollo...
+          </p>
+         <a class="btn-play-game viewMode"  >Jugar!</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Canta El himno</h2>
+        </div>
+        <div class="card-body">
+          <p>
+            En desarollo...
+          </p>
+         <a class="btn-play-game" >Jugar!</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Encuentra los Departamentos</h2>
+        </div>
+        <div class="card-body">
+          <p>
+            En desarollo...
+          </p>
+          <a class="btn-play-game"  >Jugar!</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+</div>
+
+
+
+<div class="container-quiz">
+
+
+<div class="containerQuiz">
+	
+	<div class="cont-menu" id="menu" >
+			<div class="containSide">
+				<button id="uploadQuiz"><i class="fas fa-plus"></i>Subir</button>
+				<button id="viewGuia"><i class="far fa-copy"></i>Ver</button>
+				<button onclick="getLvls()"><i class="fas fa-layer-group"></i>Niveles</button>
+				<button class="online"><i class="fas fa-network-wired"></i>Multijugador</button>
+			</div>
+			<div class="containLvl" style="display:none;">
+				<button class="arrow-back"  onclick="hideLvls()"><i class="fas fa-arrow-left"></i></button>
+				<button class="level">Level l</button>
+				<button class="level">Level 2</button>
+				<button class="level">Level 3</button>
+				<button class="level">Level 4</button>
+				
+				<div class="levelsSave"><span>Quiz Guardados</span></div>
+				
+			</div>
+			<div class="containMult" style="display:none;">
+				<button class="arrow-back" onclick="hideContMult()"><i class="fas fa-arrow-left"></i></button>
+				<button class="multOn">En Linea</button>
+				<button class="oneOn">En Un dispositivo</button>
+			</div>
+	</div>
+	
+	<div class="home-box custom-box">
+		<h3>Quiz: <span class="total-quiz">#1</span></h3>
+		<p>Numero totales de preguntas:<span class="total-questions"></span></p>
+		<button type="button" class="btn" onclick="startQuiz()">Iniciar!</button> 
+	</div>
+	
+	<div class="quiz-box custom-box hide">
+		<div class="header-quiz">
+			<span class="question-number"></span>
+			<div class="knowLvl">
+				<div class="tooltip"><span class="tool"><i class="far fa-question-circle"></i></span>
+					<span class="tooltiptext">Para salir del quiz debes presionar <br>' <i class="fas fa-arrow-left"></i> '</span>
+					
+				</div>
+			</div>
+		</div>
+	
+		<div class="question-text">
+			
+		</div>
+		<div class="option-container">
+		
+		</div>
+	<div class="options-quiz">	
+		<div class="next-question-btn">
+			<button type="button" class="btn" onclick="next()">Siguiente</button>
+		</div>
+		
+	</div>	
+		<div class="answers-indicator">
+		
+		</div>
+	</div>
+	
+	<div class="result-box custom-box hide">
+		<h1>Resultados</h1>
+		
+		<table>
+			<tr>
+				<td>Pregunta Totales</td>
+				<td><span class="total-question"></span></td>
+			</tr>
+			<tr>
+				<td>Intentos</td>
+				<td><span class="total-attempt"></span></td>
+			</tr>
+			<tr>
+				<td>Correctas</td>
+				<td><span class="total-correct"></span></td>
+			</tr>
+			<tr>
+				<td>Erroneas</td>
+				<td><span class="total-wrong"></span></td>
+			</tr>
+			<tr>
+				<td>Porcentaje</td>
+				<td><span class="percentage"></span></td>
+			</tr>
+			<tr>
+				<td>Puntaje Total</td>
+				<td><span class="total-score"></span></td>
+			</tr>
+			
+		</table>
+		<div class="spaceOptions">
+		<button type="button" class="btn" onclick="tryAgainQuiz()"><i class="fas fa-sync-alt"></i></button>
+		<button type="button" class="btn" onclick="goToHome()"><i class="fas fa-home"></i></button>
+		</div>
+	</div>								  
+</div>
+</div>
+
+<div class="mobileOn">
+	<p>Para este modo solo es necesario tener un dispositivo </p>
+	<p>Como Jugar:</p>
+	<ul>
+		<li>Agrega los nombres de las personas que jugaran</li>
+		<li>una ves ingresados ya puede jugar</li>
+	</ul>
+	<h4>Instrucciones:</h4>
+	<ul>
+		<li>una ves inicie aparecera en pantalla una pregunta y la persona que debe responderla</li>
+		<li>este juego ira por turnos</li>
+		
+	</ul>
+	<button class="players">Agregar Jugadores </button>
+	
+	<div class="playersGame">
+		<h3>Jugadores:</h3>
+	</div>
+	
+	<button class="onliStart">Iniciar</button>
+</div>
+
+				
+			<div class="menuFixed" id="menuFixed" >
+				<nav class="minMenu" id="minMenu">
+					<button onclick="screenMain()" id="iconMain" class="iconDark"><i class="fas fa-home"></i></button>
+					<button onclick="screenGame()" id="iconGame"><i class="fas fa-gamepad"></i></button>
+					<button onclick="screenConfig()" id="iconConfig"><i class="fas fa-bars"></i></button>
+				</nav>
+			</div>
+			
+			<div class="config-min" id="configMin" style="display:none">
+				<button class="min-switch" onclick=" darkMode()" >
+					<div class="optionSwitch" >
+						<p>Modo oscuro </p>	
+						<p><span class="allowDark darkAllow">Activar</span><span class="darkTl" style="display:none;">Desactivar</span></p>
+					</div>
+				</button>
+				<button class="optionsMin opt1">Ver quiz subidos(En desarollo)</button>
+				<button class="optionsMin opt2">Amigos(En desarollo)</button>
+				<button class="optionsMin opt3">Añadir(En desarollo)</button>
+				<button class="optionsMin opt4">Actualizaciones</button>
+			</div>
+			
+			<div class="opt4Hide">
+				<header class="ActHead">
+					<div >
+						<a href="#" class="closeOpt">Cerrar</a>
+					</div>
+					<h4>Este apartado esta para dar informacion sobre las proximas actualizaciones.Aquí 
+					podrás ver que se a implementado y que sera lo nuevo a implementarse en las proximas
+					actualizaciones.</h4>
+					
+					<h5>Implementaciones de esta actualizacion.</h5>
+					
+					<ul>
+						<p>Apartado en disponible en el cuestionario del himno:</p>
+						<li>-Poder crear sus propios quiz </li>
+						<li>-Poder ver vía PDF el cuestionario del himno </li>
+					</ul>
+					
+					<h5>Implementaciones para la proxima actualizacion.</h5>
+					<h6>estas seran las nuevas funcionalidades de las proximas actualizaciones.</h6>
+					<ul>
+						<li>-Implementacion de otros modos de juego(En desarollo...).</li>
+						<li>-Poder navegar por el menu con solo deslizar el dedo sobre la pantalla para dispositivos moviles (En desarollo...) </li>
+						<li>-Modo online.</li>
+						<li>-Sistema de Perfiles.</li>
+						<li>-Chat de ayuda.</li>
+						<li>-Chat con tus amigos en la plataforma.</li>
+						<li>-Un mejor diseño en cuanto a los dispositivos moviles.</li>
+						<li>-Implementar maneras diferentes de aprender para mas comodidad para los usuarios.</li>
+						
+					</ul>
+					
+				</header>
+			</div>
+		
+			
+	
+		<div class="min-page" id="min-page" >
+			<header class="min-header">
+				<div class="min-titulo">
+					<h2>Aprende Jugando!</h2>
+					<p>Ponte a prueba con los diferentes modos que hay.</p>
+					<p><i class="fas fa-user-circle"></i></p>
+
+				</div>
+			</header>
+				<div class="icon-page">
+				<span><i class="fas fa-arrows-alt-h"></i></span>
+				<span><i class="far fa-hand-point-up"></i></span>
+
+		<div class="detector">
+		
+		</div>
+	
+		
+		</div>
+		
+		<div class="upload">
+			<div class="containUp">
+				
+	
+				<div class="tooltip"><span class="tool toolUp"><i class="far fa-question-circle"></i></span>
+					<span class="tooltiptext textUp">No recargues la paginas por que puedes perder el progreso de tu quiz</span>
+				</div>
+				<p><span class="closeUpload"><i class="fas fa-times-circle"></i></span></p>
+			</div>
+			<div class="textUpload">
+				<h4>crea y comparte tu quiz con tus amigos!</h4>
+				<p>Esta funcion aun se encuentra en fase de prueba por lo tanto solo puedes crear un quiz.</p>
+				
+			</div>
+			<div class="uploadTip">
+				
+			</div>
+			<div class="inputQuiz">
+				<button id="insertQues">Crear quiz </button>
+				
+			</div>
+			
+			<!--
+			<div class="uploadToQuiz">
+			<button class="insertToQuiz">Subir</button>
+			</div>	-->
+		</div>
+		
+		<div class="pdf">
+			<iframe src="pdf.pdf"></iframe>
+			<button class="closePdf">Cerrar</div>
+		</div>
+		
+		<div class="guardarAlLocal">
+			<button>Guardar quiz</button>
+			<article id="textSave"></article>
+		</div>
+		
+	
+
+<script src="js/page.js"></script>	
+<script src="js/quiz.js"></script>
+<script src="js/app.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
